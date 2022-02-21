@@ -101,6 +101,19 @@ p {
     font-size: 40px;
 }
 
+.nuestrosProductos2 {
+    background-image: linear-gradient(to right, darkred, whitesmoke, darkred)
+}
+
+.nosotros-1 {
+    background-image: linear-gradient(to left, palevioletred, darkgray, palevioletred, darkgray);
+}
+
+.logoFlip {
+    transform: translate(110px, 20px);
+}
+
+
 .contenedor {
     display: grid;
     background-color: black;
