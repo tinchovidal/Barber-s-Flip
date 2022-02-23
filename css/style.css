@@ -7,15 +7,55 @@
     font-size: larger;
 }
 
+.headerNosotros a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.headerServicios a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.headerContacto a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.headerProductos a:hover {
+    text-decoration: none;
+    color: white;
+}
+
 .header a:hover {
     text-decoration: none;
     color: white;
 }
 
+.headerNosotros nav ul li:hover {
+    background-color: #6A5495;
+}
+
+.headerServicios nav ul li:hover {
+    background-color: #6A5495;
+}
+
+.headerContacto nav ul li:hover {
+    background-color: #6A5495;
+}
+
+.headerProductos nav ul li:hover {
+    background-color: #6A5495;
+}
+
+.header nav ul li:hover {
+    background-color: #6A5495;
+}
+
 
 li {
     list-style: none;
-    margin: 35px;
+    margin: 45px;
 }
 
 ul {
@@ -27,8 +67,29 @@ h2 {
     font-size: 60px;
 }
 
-.header nav ul li:hover {
-    background-color: #6A5495;
+
+.headerNosotros nav ul li {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.headerServicios nav ul li {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.headerContacto nav ul li {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.headerProductos nav ul li {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .header nav ul li {
@@ -41,7 +102,9 @@ h2 {
 a {
     text-decoration: none;
     color: black;
-    font-size: 40px;
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px;
 
 }
 
@@ -68,10 +131,6 @@ a {
 .nosotros-1 {
     color: black;
 
-}
-
-.contenedor .contenedorPadre-nosotros {
-    overflow: hidden;
 }
 
 .nosotros-2,
@@ -109,10 +168,7 @@ p {
     background-image: linear-gradient(to left, palevioletred, darkgray, palevioletred, darkgray);
 }
 
-.logoFlip {
-    transform: translate(110px, 20px);
-}
-
+/* INDEX HTML */
 
 .contenedor {
     display: grid;
@@ -121,7 +177,8 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 250px 500px 500px 150px;
     grid-auto-columns: 1fr;
-    grid-template-areas: "header header"
+    grid-template-areas:
+        "header header"
         "flip flip"
         "corte-1 corte-2"
         "corte-3 corte-4"
@@ -133,10 +190,9 @@ p {
 .header {
     grid-area: header;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 30px;
     background-color: lightgray;
 
 
@@ -219,6 +275,8 @@ p {
     background-color: lightgray;
 }
 
+/* NOSOTROS HTML */
+
 .contenedorPadre-nosotros {
     display: grid;
     background-color: black;
@@ -226,17 +284,28 @@ p {
     grid-template-rows: 150px 250px 150px 200px 200px 200px 200px 150px;
     grid-auto-columns: 1fr;
     grid-template-areas:
-        "header header header"
+        "headerNosotros headerNosotros headerNosotros"
         "flipNosotros flipNosotros flipNosotros"
         "nosotros-1 nosotros-1 nosotros-1"
         "nosotros-2 nosotros-3 nosotros-4"
         "nosotros-2 nosotros-5 nosotros-6"
         "dreamteam-1 work-1 sucursal-1"
         "dreamteam-1 work-1 sucursal-1"
-        "footer footer footer"
+        "footerNosotros footerNosotros footerNosotros"
     ;
     width: 100%;
     height: 100%;
+}
+
+.headerNosotros {
+    grid-area: headerNosotros;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: lightgray;
+
+
 }
 
 .flipNosotros {
@@ -350,8 +419,18 @@ p {
 
 }
 
+.footerNosotros {
+    grid-area: footerNosotros;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
 
-/* CONTACTO . HTML */
+}
+
+
+/* CONTACTO  HTML */
 
 .contenedorPadre-contacto {
     display: grid;
@@ -360,7 +439,7 @@ p {
     grid-template-rows: 150px 250px 150px 80px 80px 500px 150px;
     grid-auto-columns: 1fr;
     grid-template-areas:
-        "header header"
+        "headerContacto headerContacto"
         "flipContacto flipContacto"
         "contacto-1 contacto-1"
         "contacto-2 contacto-2"
@@ -370,6 +449,15 @@ p {
 
     width: 100%;
     height: 100%;
+}
+
+.headerContacto {
+    grid-area: headerContacto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: lightgray;
 }
 
 .flipContacto {
@@ -426,23 +514,33 @@ p {
 
 }
 
+/* PRODUCTOS HTML */
+
 .contenedorPadre-productos {
     grid-area: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 250px 250px 500px 500px 150px;
     grid-auto-columns: 1fr;
     grid-area:
-        "header header"
+        "headerProductos headerProductos"
         "flipProductos flipProductos"
         "nuestrosProductos1 nuestrosProductos1"
         "nuestrosProductos2 nuestrosPorductos2"
         "nuestrosProductos2 nuestrosPorductos2"
-        "footer footer";
+        "footerProductos footerProductos";
 
     width: 100%;
     height: 100%;
 }
 
+.headerProductos {
+    grid-area: headerProductos;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: lightgray;
+}
 
 .flipProductos {
     grid-area: flipProductos;
@@ -478,24 +576,44 @@ p {
     align-items: stretch;
 }
 
+.footerProductos {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+
+/* SERVICIOS HTML */
 
 .contenedorPadre-servicios {
     display: grid;
     grid-auto-columns: 1fr 1fr 1fr;
     grid-template-rows: 150px 250px 100px 300px 300px 150px;
     grid-template-areas:
-        "header header header"
+        "headerServicios headerServicios headerServicios"
         "flip flip flip"
         "nuestrosServicios nuestrosServicios nuestrosServicios"
         "nuestrosServicios1 nuestrosServivios2 nuestrosServicios3"
         "nuestrosServicios4 nuestrosServicios5 nuestrosServicios6"
-        "footer footer footer";
+        "footerServicios footerServicios footerServicios";
 
     width: 100%;
     height: 100%;
 
 }
+
+.headerServicios {
+    grid-area: headerServicios;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: lightgray;
+}
+
+
 
 .nuestrosServicios {
 
@@ -504,6 +622,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .nuestrosServicios1 {
@@ -511,16 +630,18 @@ p {
     grid-area: nuestrosServicios1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .nuestrosServicios2 {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+
 
 }
 
@@ -529,8 +650,9 @@ p {
     grid-area: nuestrosServicios3;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+
 
 }
 
@@ -539,8 +661,9 @@ p {
     grid-area: nuestrosServicios4;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .nuestrosServicios5 {
@@ -548,8 +671,9 @@ p {
     grid-area: nuestrosServicios5;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+
 
 }
 
@@ -558,6 +682,1201 @@ p {
     grid-area: nuestrosServicios6;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footerServicios {
+    grid-area: footerServicios;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+
+}
+
+/* MEDIAS QUERIES MOBILE */
+
+@media only screen and (max-width: 768px) {
+
+    /* MQ. INDEX MOBILE */
+
+    .contenedor {
+        display: grid;
+        background-color: black;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 150px 250px 250px 250px 250px 150px;
+        grid-template-areas:
+            "header header"
+            "flip flip"
+            "corte-1 corte-1"
+            "corte-2 corte-2"
+            "corte-3 corte-3"
+            "corte-4 corte-4"
+            "footer footer";
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        grid-area: header;
+        display: flex;
+        background-color: lightgray;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+
+    .flip {
+        grid-area: flip;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+
+
+
+    }
+
+    .corte-1 {
+        grid-area: corte-1;
+        display: flex;
+        background-image: url("https://i.ytimg.com/vi/aa1YDr8-8aU/maxresdefault.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+
+    }
+
+    .corte-2 {
+        grid-area: corte-2;
+        display: flex;
+        background-image: url("http://compras.cuponidad.pe/images/Deals/salonecaballero2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+    }
+
+
+    .corte-3 {
+        grid-area: corte-3;
+        display: flex;
+        background-image: url("https://i.ytimg.com/vi/eCmevF_32xA/maxresdefault.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+
+    }
+
+    .corte-4 {
+        grid-area: corte-4;
+        display: flex;
+        background-image: url("http://compras.cuponidad.pe/images/Deals/salone3.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+
+    }
+
+    .footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    /*MQ. NOSOTROS MOBILE*/
+
+    .contenedorPadre-nosotros {
+        display: grid;
+        background-color: black;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 150px 150px 200px 200px 200px 200px 150px;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            "headerNosotros headerNosotros"
+            "flipNosotros flipNosotros"
+            "nosotros-1 nosotros-1"
+            "nosotros-2 nosotros-3"
+            "nosotros-2 nosotros-4"
+            "nosotros-5 nosotros-6"
+            "dreamteam-1 sucursal-1"
+            "work-1 sucursal-1"
+            "footerNosotros footerNosotros"
+        ;
+        width: 100%;
+        height: 100%;
+    }
+
+    .headerNosotros {
+        grid-area: headerNosotros;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: lightgray;
+
+
+    }
+
+    .flipNosotros {
+        grid-area: flipNosotros;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 80px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        text-shadow: 1px 2px 1px white;
+
+    }
+
+    .nosotros-1 {
+        grid-area: nosotros-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 50px 50px;
+
+    }
+
+    .nosotros-2 {
+        grid-area: nosotros-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 50px 50px;
+    }
+
+    .nosotros-3 {
+        grid-area: nosotros-3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 50px 50px;
+    }
+
+    .nosotros-4 {
+        grid-area: nosotros-4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .nosotros-5 {
+        grid-area: nosotros-5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .nosotros-6 {
+        grid-area: nosotros-6;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    .dreamteam-1 {
+        grid-area: dreamteam-1;
+        display: flex;
+        background-image: url('https://images.fresha.com/locations/location-profile-images/314090/236848/fa0fc5b8-391c-425f-8cf2-dd0b4127486c.jpeg?class=fallback');
+        background-position: flex-start;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .work-1 {
+        grid-area: work-1;
+        display: flex;
+        background-image: url("https://thumbs.dreamstime.com/b/peluqueros-que-preparan-y-dise%C3%B1an-cortes-de-pelo-clientes-en-barber%C3%ADa-127667703.jpg");
+        background-position: flex-end;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .sucursal-1 {
+        grid-area: sucursal-1;
+        display: flex;
+        background-image: url("https://urbanbarbershop.es/wp-content/uploads/interior-barberia-granada-centro-urbanbarbershop.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    .footerNosotros {
+        grid-area: footerNosotros;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    /* MQ. CONTACTO MOBILE */
+
+    .contenedorPadre-contacto {
+        display: grid;
+        background-color: white;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 250px 150px 80px 80px 500px 150px;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            "headerContacto headerContacto"
+            "flipContacto flipContacto"
+            "contacto-1 contacto-1"
+            "contacto-2 contacto-2"
+            "contacto-3 contacto-3"
+            "formContacto formContacto"
+            "footer footer";
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .headerContacto {
+        grid-area: headerContacto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: lightgray;
+    }
+
+    .flipContacto {
+        grid-area: flipContacto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 80px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        text-shadow: 1px 2px 1px white;
+
+    }
+
+    .contacto-1 {
+        grid-area: contacto-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+
+    }
+
+    .contacto-2 {
+        grid-area: contacto-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+    }
+
+    .contacto-3 {
+        grid-area: contacto-3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: lightgray;
+    }
+
+    .formContacto {
+        grid-area: formContacto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: white;
+
+    }
+
+    /* MQ. PRODUCTOS MOBILE */
+
+    .contenedorPadre-productos {
+        grid-area: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 250px 250px 500px 500px 150px;
+        grid-auto-columns: 1fr;
+        grid-area:
+            "headerProductos headerProductos"
+            "flipProductos flipProductos"
+            "nuestrosProductos1 nuestrosProductos1"
+            "nuestrosProductos2 nuestrosPorductos2"
+            "nuestrosProductos2 nuestrosPorductos2"
+            "footerProductos footerProductos";
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .headerProductos {
+        grid-area: headerProductos;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: lightgray;
+    }
+
+    .flipProductos {
+        grid-area: flipProductos;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 80px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        text-shadow: 1px 2px 1px white;
+
+    }
+
+
+
+    .nuestrosProductos1 {
+        grid-area: nuestrosProductos1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nuestrosProductos2 {
+        grid-area: nuestrosProductos2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .footerProductos {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /* MQ. SERVICIOS MOBILE */
+
+    .contenedorPadre-servicios {
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-rows: 180px 150px 100px 150px 150px 150px 150px 100px 100px 80px;
+        grid-template-areas:
+            "headerServicios headerServicios"
+            "flip flip"
+            "nuestrosServicios nuestrosServicios"
+            "nuestrosServicios1 nuestrosServicios2"
+            "nuestrosServicios1 nuestrosServicios2"
+            "nuestrosServicios3 nuestrosServicios4"
+            "nuestrosServicios3 nuestrosServicios4"
+            "nuestrosServicios5 nuestrosServicios6"
+            "nuestrosServicios5 nuestrosServicios6"
+            "nuestrosServicios5 nuestrosServicios6"
+            "footerServicios footerServicios";
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .headerServicios {
+        grid-area: headerServicios;
+        display: flex;
+        background-color: lightgray;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    .flip {
+        grid-area: flip;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        text-shadow: 1px 2px 1px white;
+
+    }
+
+
+    .nuestrosServicios {
+
+        grid-area: nuestrosServicios;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .nuestrosServicios1 {
+
+        grid-area: nuestrosServicios1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .nuestrosServicios2 {
+
+        grid-area: nuestrosServicios2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    .nuestrosServicios3 {
+
+        grid-area: nuestrosServicios3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    .nuestrosServicios4 {
+
+        grid-area: nuestrosServicios4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .nuestrosServicios5 {
+
+        grid-area: nuestrosServicios5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+
+    .nuestrosServicios6 {
+        grid-area: nuestrosServicios6;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .footerServicios {
+        grid-area: footerServicios;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+
+    }
+
+    li {
+
+        font-size: 30px;
+    }
+
+    .nuestrosServicios1,
+    .nuestrosServicios2,
+    .nuestrosServicios3,
+    .nuestrosServicios4,
+    .nuestrosServicios5,
+    .nuestrosServicios6 {
+        overflow: hidden;
+    }
+
+
+
+}
+
+/* MEDIAS QUERIES DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+
+    /* MQ. INDEX */
+
+    .contenedor {
+        display: grid;
+        background-color: black;
+        grid-gap: 2px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 150px 300px 300px 150px;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            "header header"
+            "flip flip"
+            "corte-1 corte-2"
+            "corte-3 corte-4"
+            "footer footer";
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgray;
+
+
+    }
+
+
+    .flip {
+        grid-area: flip;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 80px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        text-shadow: 1px 2px 1px white;
+
+
+
+    }
+
+    .corte-1 {
+        grid-area: corte-1;
+        display: flex;
+        background-image: url("https://i.ytimg.com/vi/aa1YDr8-8aU/maxresdefault.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .corte-2 {
+        grid-area: corte-2;
+        display: flex;
+        background-image: url("http://compras.cuponidad.pe/images/Deals/salonecaballero2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .corte-3 {
+        grid-area: corte-3;
+        display: flex;
+        background-image: url("https://i.ytimg.com/vi/eCmevF_32xA/maxresdefault.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corte-4 {
+        grid-area: corte-4;
+        display: flex;
+        background-image: url("http://compras.cuponidad.pe/images/Deals/salone3.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        font-size: 40px;
+    }
+
+    li {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    p {
+        font-size: 50px;
+    }
+
+    /* MQ. NOSOTROS */
+
+    .contenedorPadre-nosotros {
+        display: grid;
+        background-color: black;
+        grid-template-columns: 33% 33.5% 33.5%;
+        grid-template-rows: 150px 250px 150px 200px 200px 200px 200px 150px;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            "headerNosotros headerNosotros headerNosotros"
+            "flipNosotros flipNosotros flipNosotros"
+            "nosotros-1 nosotros-1 nosotros-1"
+            "nosotros-2 nosotros-3 nosotros-4"
+            "nosotros-2 nosotros-5 nosotros-6"
+            "dreamteam-1 work-1 sucursal-1"
+            "dreamteam-1 work-1 sucursal-1"
+            "footer footer footer"
+        ;
+        width: 100%;
+        height: 100%;
+    }
+
+    .headerNosotros {
+        grid-area: headerNosotros;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: lightgray;
+
+
+    }
+
+    .flipNosotros {
+        grid-area: flipNosotros;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 80px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        text-shadow: 1px 2px 1px white;
+
+    }
+
+    .nosotros-1 {
+        grid-area: nosotros-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 50px 50px;
+
+    }
+
+    .nosotros-2 {
+        grid-area: nosotros-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 50px 50px;
+    }
+
+    .nosotros-3 {
+        grid-area: nosotros-3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: 50px 50px;
+    }
+
+    .nosotros-4 {
+        grid-area: nosotros-4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .nosotros-5 {
+        grid-area: nosotros-5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .nosotros-6 {
+        grid-area: nosotros-6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .dreamteam-1 {
+        grid-area: dreamteam-1;
+        display: flex;
+        background-image: url('https://images.fresha.com/locations/location-profile-images/314090/236848/fa0fc5b8-391c-425f-8cf2-dd0b4127486c.jpeg?class=fallback');
+        background-position: flex-start;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .work-1 {
+        grid-area: work-1;
+        display: flex;
+        background-image: url("https://thumbs.dreamstime.com/b/peluqueros-que-preparan-y-dise%C3%B1an-cortes-de-pelo-clientes-en-barber%C3%ADa-127667703.jpg");
+        background-position: flex-end;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .sucursal-1 {
+        grid-area: sucursal-1;
+        display: flex;
+        background-image: url("https://urbanbarbershop.es/wp-content/uploads/interior-barberia-granada-centro-urbanbarbershop.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    .footerNosotros {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    p {
+        font-size: 35px;
+
+    }
+
+    /* MQ CONTACTO */
+
+    .contenedorPadre-contacto {
+        display: grid;
+        background-color: white;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 250px 150px 80px 80px 500px 150px;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            "headerContacto headerContacto"
+            "flipContacto flipContacto"
+            "contacto-1 contacto-1"
+            "contacto-2 contacto-2"
+            "contacto-3 contacto-3"
+            "formContacto formContacto"
+            "footer footer";
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .headerContacto {
+        grid-area: headerContacto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: lightgray;
+    }
+
+    .flipContacto {
+        grid-area: flipContacto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 80px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        text-shadow: 1px 2px 1px white;
+
+    }
+
+    .contacto-1 {
+        grid-area: contacto-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+
+    }
+
+    .contacto-2 {
+        grid-area: contacto-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+    }
+
+    .contacto-3 {
+        grid-area: contacto-3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: lightgray;
+    }
+
+    .formContacto {
+        grid-area: formContacto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: white;
+
+    }
+
+
+
+    h2 {
+
+        font-size: 45px;
+
+    }
+
+    h3 {
+
+        font-size: 35px;
+    }
+
+    /* MQ. PRODUCTOS */
+
+    .contenedorPadre-productos {
+        grid-area: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 250px 250px 500px 500px 500px 150px;
+        grid-auto-columns: 1fr;
+        grid-area:
+            "headerProductos headerProductos"
+            "flipProductos flipProductos"
+            "nuestrosProductos1 nuestrosProductos1"
+            "nuestrosProductos1 nuestrosPorductos1"
+            "nuestrosProductos2 nuestrosPorductos2"
+            "nuestrosProductos2 nuestrosPorductos2"
+            "footerProductos footerProductos";
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .headerProductos {
+        grid-area: headerProductos;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: lightgray;
+    }
+
+    .flipProductos {
+        grid-area: flipProductos;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 80px;
+        color: #74959A;
+        background-image: url("https://media.istockphoto.com/photos/professional-scissors-on-black-background-picture-id1124646592?k=20&m=1124646592&s=612x612&w=0&h=LIsJUPte2MTONRb3GZxt3koRD7pWRyC-USz-pxVt_aA=");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        text-shadow: 1px 2px 1px white;
+
+    }
+
+
+
+    .nuestrosProductos1 {
+        grid-area: nuestrosProductos1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nuestrosProductos2 {
+        grid-area: nuestrosProductos2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .footerProductos {
+        grid-area: footerProductos;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /* MQ. SERVICIOS*/
+
+    .contenedorPadre-servicios {
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-rows: 150px 250px 100px 300px 300px 300px 150px;
+        grid-template-areas:
+            "headerServicios headerServicios"
+            "flip flip"
+            "nuestrosServicios nuestrosServicios"
+            "nuestrosServicios1 nuestrosServivios2"
+            "nuestrosServicios3 nuestrosServicios4"
+            "nuestrosServicios5 nuestrosServicios6"
+            "footerServicios footerServicios";
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+
+
+    .nuestrosServicios {
+
+        grid-area: nuestrosServicios;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .nuestrosServicios1 {
+
+        grid-area: nuestrosServicios1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .nuestrosServicios2 {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    .nuestrosServicios3 {
+
+        grid-area: nuestrosServicios3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    .nuestrosServicios4 {
+
+        grid-area: nuestrosServicios4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .nuestrosServicios5 {
+
+        grid-area: nuestrosServicios5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 250px;
+
+
+    }
+
+
+    .nuestrosServicios6 {
+        grid-area: nuestrosServicios6;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 250px;
+
+    }
+
+    .footerServicios {
+        grid-area: footerServicios;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+
+
+
 }
